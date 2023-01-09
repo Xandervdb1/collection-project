@@ -32,7 +32,7 @@ for (let paragraph of paragraphArr) {
 
 for (let paragraph of paragraphArr) {
     if(paragraph.classList == "") {
-        paragraph.style.backgroundColor = randomColor();
+        paragraph.style.color = randomColor();
     }
 }
 
