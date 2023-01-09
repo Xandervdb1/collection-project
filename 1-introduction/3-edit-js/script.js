@@ -23,6 +23,10 @@ document.body.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
 
 let childrenArray = document.body.children;
 
-for (let i = 0; i < childrenArray.length; i++) {
-    console.log(childrenArray[i]);
+// for (let i = 0; i < childrenArray.length; i++) {
+//     console.log(childrenArray[i]);
+// }
+
+for (let child of childrenArray) {
+    console.log(child);
 }
