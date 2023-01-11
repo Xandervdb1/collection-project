@@ -2,7 +2,7 @@
 // for each learner in your group. This section should contain a paragraph 
 // with the name of the learner. Those sections should be appended in the <article>
 
-let learners = ["Xander", "Niels", "Toon", "Sven", "Ward", "Sofie", "Thomas", "Sander", "Claire", "Ada", "Freke"];
+let learners = ['Ada','Basile', 'Beatrice', 'Céline', 'Claire', 'David', 'Freke', 'James', 'Jean', 'Jitske', 'Juraj', 'Lisa', 'Marieke', 'Nick', 'Niels', 'Pious', 'Rachid', 'Raoul', 'Sander', 'Sarah', 'Seppe', 'Sofie', 'Sven', 'Tesse', 'Thomas', 'Toon', 'Vincent', 'Ward', 'Xander', 'Yousra'];
 let articleEl = document.querySelector("article");
 let luma;
 
