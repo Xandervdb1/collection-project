@@ -38,9 +38,9 @@ function randomColor() {
 // Find a way so that everytime you load the page the order of the elements changes!
 // https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=The%20first%20and%20simplest%20way,)%20%3D%3E%200.5%20%2D%20Math.
 function shuffleArray(array) {
-    for (let i = 0; i < array.length; i ++) {
+    for (let i = array.length - 1; i > 0; i--) {
         let randomIndex = Math.floor(Math.random() * (i + 1)); //make a random index
-        tempIndex = array[i];
+        let tempIndex = array[i];
         array[i] = array[randomIndex]; //assigning current index to the random index
         array[randomIndex] = tempIndex; //taking the value at the one we just replaced and assigning it to the current one
     }
