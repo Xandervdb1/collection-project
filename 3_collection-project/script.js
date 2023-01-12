@@ -43,6 +43,7 @@ for (let movie of collection) {
                     genrediv.classList.add("tag", "genre");
                     genrediv.innerHTML = genre
                     genrediv.style.backgroundColor = checkGenre(genre);
+                    genrediv.style.color = checkluma(genrediv.style.backgroundColor);
                     //tags div append genre divs
                     tagsdiv.append(genrediv);
                 }
@@ -174,10 +175,25 @@ for (let movie of collection) {
     //moviecard appends all components made
     moviecard.append(moviethumbnail);
     moviecard.append(contentdiv);
-
-
-    console.log(moviecard);
     cardscontainer.append(moviecard);
+
+    moviecard.addEventListener("mouseenter", (e) => {
+        imdbicon.setAttribute("src", "./assets/imdbiconwhite.png");
+        youtubeicon.setAttribute("src", "./assets/youtubeiconwhite.png");
+        moviecard.style.backgroundColor = "#383D5E";
+        moviecard.style.color = "#D9DBF1";
+        ageratingdiv.style.color = "#230903";
+        durationdiv.style.color = "#230903";
+        moviecard.style.transform = "scale(1.1)";
+    }); 
+
+    moviecard.addEventListener("mouseleave", (e) => {
+        imdbicon.setAttribute("src", "./assets/imdbicon.png");
+        youtubeicon.setAttribute("src", "./assets/youtubeicon.png");
+        moviecard.style.backgroundColor = "#D9DBF1";
+        moviecard.style.color = "#230903"
+        moviecard.style.transform = "scale(1)";
+    });
 }
 
 function checkGenre(genre) {
@@ -212,5 +228,18 @@ function checkGenre(genre) {
             return "#B3D493"
         default:
             return "#AB9685";
+    }
+}
+
+function checkluma(color) {
+    colorArr =  color.substring(4, color.length-1).replace(/ /g, '').split(',');
+    let r  = parseInt(colorArr[0]);
+    let g  = parseInt(colorArr[1]);
+    let b  = parseInt(colorArr[2]);
+
+    let luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+    if (luma > 128) {
+        return "#230903";
     }
 }
