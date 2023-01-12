@@ -186,6 +186,7 @@ for (let movie of collection) {
         durationdiv.style.color = "#230903";
         moviecard.style.transform = "scale(1.1)";
         moviecard.style.boxShadow = "0px 15px 20px #4B5381";
+        moviethumbnail.style.backgroundPosition = "center";
     }); 
 
     moviecard.addEventListener("mouseleave", (e) => {
@@ -195,6 +196,7 @@ for (let movie of collection) {
         moviecard.style.color = "#230903"
         moviecard.style.transform = "scale(1)";
         moviecard.style.boxShadow = "0px 2px 10px #4B5381";
+        moviethumbnail.style.backgroundPosition = "top";
     });
 }
 
