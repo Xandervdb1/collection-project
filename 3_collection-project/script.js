@@ -200,6 +200,29 @@ for (let movie of collection) {
     });
 }
 
+let searchInput = document.querySelector(".search");
+searchInput.addEventListener("keyup", (e) => {
+    filter = searchInput.value.toUpperCase();
+    let cardsHidden = 0;
+    let cards = document.querySelectorAll(".card");
+    for (let card of cards) {
+        let movietitle = card.querySelector("h2").innerHTML.toUpperCase();
+        if (movietitle.indexOf(filter) > -1) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+            cardsHidden += 1;
+        };
+    }
+
+    let errormsg = document.querySelector(".errormsg");
+    if (cardsHidden == collection.length) {
+        errormsg.style.display = "inline";
+    } else {
+        errormsg.style.display = "none";
+    }
+});
+
 function checkGenre(genre) {
     switch (genre) {
         case "Musical":
