@@ -14,15 +14,21 @@ h1, h2, h3 {
 }
 
 body {
-    margin: 1rem;
+    margin: 1rem 6rem;
+    margin-bottom: 3rem;
     background-color: #7D84B2;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin: 0 3rem;
 }
 
 .header h1, .header p {
@@ -35,11 +41,30 @@ body {
     margin: auto 0;
 }
 
+header input {
+    background-color: #383D5E;
+    font-size: 16px;
+    color: #D9DBF1;
+    border-radius: 20px;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #7D84B2;
+}
+
+header input::placeholder {
+    color: #babccf;
+}
+
+header input:focus, header input:active {
+    outline: none;
+}
+
 .cards {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    min-height: 50vh;
     gap: 4rem 2rem;
 }
 
@@ -147,4 +172,10 @@ body {
 .card .links img {
     margin-top: 0.5rem;
     width: 40px;
+}
+
+.errormsg {
+    color: #D9DBF1;
+    font-size: 20px;
+    display: none;
 }
