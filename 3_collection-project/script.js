@@ -185,6 +185,7 @@ for (let movie of collection) {
         ageratingdiv.style.color = "#230903";
         durationdiv.style.color = "#230903";
         moviecard.style.transform = "scale(1.1)";
+        moviecard.style.boxShadow = "0px 15px 20px #4B5381";
     }); 
 
     moviecard.addEventListener("mouseleave", (e) => {
@@ -193,6 +194,7 @@ for (let movie of collection) {
         moviecard.style.backgroundColor = "#D9DBF1";
         moviecard.style.color = "#230903"
         moviecard.style.transform = "scale(1)";
+        moviecard.style.boxShadow = "0px 2px 10px #4B5381";
     });
 }
 
