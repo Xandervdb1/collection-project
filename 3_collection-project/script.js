@@ -23,7 +23,7 @@ const collection = [
         agerating: "R",
         genres: ["Romance", "Sci-fi"],
         cast: ["Joaquin Phoenix", "Spike Jonze", "Scarlett Johansson", "Rooney Mara", "Olivia Wilde"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_.jpg",
+        thumbnail: "./assets/herposter.jpg",
         trailer: "https://www.youtube.com/watch?v=dJTU48_yghs",
         imdb: "https://www.imdb.com/title/tt1798709/?ref_=ttmi_tt",
         imdbrating: "8.0/10",
@@ -83,7 +83,7 @@ const collection = [
         agerating: "TV-MA",
         genres: ["Thriller", "Horror"],
         cast: ["Alexandra Masangkay", "Iván Massagué", "Zorion Eguileor", "Antonia San Juan", "Zihara Llana"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+        thumbnail: "./assets/theplatformposter.jpg",
         trailer: "https://www.youtube.com/watch?v=RlfooqeZcdY",
         imdb: "https://www.imdb.com/title/tt8228288/?ref_=nv_sr_srsg_0",
         imdbrating: "7.0/10",
@@ -98,7 +98,7 @@ const collection = [
         agerating: "PG-13",
         genres: ["Action", "Adventure"],
         cast: ["Benedict Cumberbatch", "Benedict Wong", "Rachel McAdams", "Chiwetel Ejiofor", "Tilda Swinton"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_.jpg",
+        thumbnail: "./assets/doctorstrangeposter.jpg",
         trailer: "https://www.youtube.com/watch?v=h7gvFravm4A",
         imdb: "https://www.imdb.com/title/tt1211837/?ref_=nv_sr_srsg_0",
         imdbrating: "7.5/10",
@@ -113,7 +113,7 @@ const collection = [
         agerating: "PG-13",
         genres: ["Action", "Sci-fi"],
         cast: ["Cate Blanchett", "Chris Hemsworth", "Jeff Goldblum", "Taika Waititi", "Tessa Thompson"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_.jpg",
+        thumbnail: "./assets/thorragnarokposter.jpg",
         trailer: "https://www.youtube.com/watch?v=ue80QwXMRHg",
         imdb: "https://www.imdb.com/title/tt3501632/?ref_=nv_sr_srsg_0",
         imdbrating: "7.9/10",
@@ -143,7 +143,7 @@ const collection = [
         agerating: "PG-14",
         genres: ["Comedy", "Sitcom"],
         cast: ["Steve Carell", "John Krasinksi", "Jenna Fischer", "Rainn Wilson", "Ellie Kemper"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_.jpg",
+        thumbnail: "./assets/theofficeposter.jpg",
         trailer: "https://www.youtube.com/watch?v=tNcDHWpselE",
         imdb: "https://www.imdb.com/title/tt0386676/?ref_=fn_al_tt_1",
         imdbrating: "9.0/10",
@@ -173,7 +173,7 @@ const collection = [
         agerating: "PG-12",
         genres: ["Fantasy", "Adventure"],
         cast: ["Christian Bale", "Takuya Kimura", "Chieko Baisho", "Tatsuya Gashuin", "Emily Mortimer"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BMTY1OTg0MjE3MV5BMl5BanBnXkFtZTcwNTUxMTkyMQ@@._V1_.jpg",
+        thumbnail: "./assets/howlsmovingcastleposter.jpg",
         trailer: "https://www.youtube.com/watch?v=iwROgK94zcM",
         imdb: "https://www.imdb.com/title/tt0347149/?ref_=tt_mv_close",
         imdbrating: "8.2/10",
@@ -188,7 +188,7 @@ const collection = [
         agerating: "PG-18",
         genres: ["Animation", "Action"],
         cast: ["Kikunosuke Toya", "Tomori Kusunoki", "Fairouz Ai", "Shogo Sakata", "Kenjiro Tsuda"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BNGFkZDRlNWEtMDdlMy00MGUyLWJhOGMtOTU0MTA2YTM1M2QwXkEyXkFqcGdeQXVyMTUzNjM4ODE1._V1_.jpg",
+        thumbnail: "./assets/chainsawmanposter.jpg",
         trailer: "https://www.youtube.com/watch?v=l96zmDlWCBk",
         imdb: "https://www.imdb.com/title/tt13616990/?ref_=nv_sr_srsg_0",
         imdbrating: "8.6/10",
@@ -203,7 +203,7 @@ const collection = [
         agerating: "G",
         genres: ["Family", "Adventure"],
         cast: ["Andrew Stanton", "Ben Burtt", "Elissa Knight", "John Ratzenberger", "Jeff Garlin"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_.jpg",
+        thumbnail: "./assets/walleposter.jpg",
         trailer: "https://www.youtube.com/watch?v=3Mi62VKDhm0",
         imdb: "https://www.imdb.com/title/tt0910970/?ref_=fn_al_tt_3",
         imdbrating: "8.4/10",
@@ -233,7 +233,7 @@ const collection = [
         agerating: "PG-16",
         genres: ["Crime", "Drama"],
         cast: ["Jason Bateman", "Laura Linney", "Julia Garner", "Sofia Hublitz", "Skylar Gaertner"],
-        thumbnail: "https://m.media-amazon.com/images/M/MV5BZDUxMWNlMTUtYTljZS00MTE0LTlkYjktOTU1ODZjYzBhMTk0XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+        thumbnail: "./assets/ozarkposter.jpg",
         trailer: "https://www.youtube.com/watch?v=5hAXVqrljbs",
         imdb: "https://www.imdb.com/title/tt5071412/?ref_=fn_al_tt_1",
         imdbrating: "8.5/10",
@@ -271,16 +271,6 @@ for (let movie of collection) {
                 //tags div appends agerating div
                 tagsdiv.append(ageratingdiv);
 
-                //add genre tags
-                let genres = movie.genres
-                for (let genre of genres) {
-                    let genrediv = document.createElement("div");
-                    genrediv.classList.add("tag", "genre");
-                    genrediv.innerHTML = genre
-                    //tags div append genre divs
-                    tagsdiv.append(genrediv);
-                }
-                
                 //add duration tag
                 let durationdiv = document.createElement("div");
                 durationdiv.classList.add("tag", "duration");
@@ -288,7 +278,18 @@ for (let movie of collection) {
 
                 //tags div append duration div
                 tagsdiv.append(durationdiv);
-            
+
+                //add genre tags
+                let genres = movie.genres
+                for (let genre of genres) {
+                    let genrediv = document.createElement("div");
+                    genrediv.classList.add("tag", "genre");
+                    genrediv.innerHTML = genre
+                    genrediv.style.backgroundColor = checkGenre(genre);
+                    //tags div append genre divs
+                    tagsdiv.append(genrediv);
+                }
+                            
             //add heading div
             let headingdiv = document.createElement("div");
             headingdiv.classList.add("heading");
@@ -399,7 +400,7 @@ for (let movie of collection) {
                         youtubeicon.setAttribute("alt", "Youtube icon");
 
                         //imdb link appends icon
-                        imdblink.append(youtubeicon);
+                        trailerlink.append(youtubeicon);
 
                     //linksdiv appends links
                     linksdiv.append(imdblink);
@@ -420,4 +421,39 @@ for (let movie of collection) {
 
     console.log(moviecard);
     cardscontainer.append(moviecard);
+}
+
+function checkGenre(genre) {
+    switch (genre) {
+        case "Musical":
+            return "#C79BB6";
+        case "Family":
+            return "#E87C58";
+        case "Romance":
+            return "#F5A9B2";
+        case "Sci-fi":
+            return "#6F7AAE";
+        case "Drama":
+            return "#84C9B2";
+        case "Thriller":
+            return "#9399B9";
+        case "Crime":
+            return "#3D8C92";
+        case "Horror":
+            return "#A488B4"
+        case "Action":
+            return "#D7C65C"
+        case "Adventure":
+            return "#57904F"
+        case "Comedy":
+            return "#A75788";
+        case "Sitcom":
+            return "#E8673C"
+        case "Fantasy":
+            return "#EF9CB9"
+        case "Animation":
+            return "#B3D493"
+        default:
+            return "#AB9685";
+    }
 }
