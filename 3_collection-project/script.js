@@ -223,6 +223,23 @@ searchInput.addEventListener("keyup", (e) => {
     }
 });
 
+let filterTags = document.querySelectorAll(".tags input");
+let filterLabels = document.querySelectorAll(".tags label");
+console.log(filterLabels)
+for (let filterTag of filterTags) {
+    filterTag.checked = false;
+    filterTag.addEventListener("change", (e) => {
+        let label = e.target.nextElementSibling;
+        if (filterTag.checked) {
+            label.style.backgroundColor = "#383D5E";
+            label.style.color = "#D9DBF1";
+        } else {
+            label.style.backgroundColor = "#D9DBF1";
+            label.style.color = "#230903";
+        }
+    });
+}
+
 function checkGenre(genre) {
     switch (genre) {
         case "Musical":
