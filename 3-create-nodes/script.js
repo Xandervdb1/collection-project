@@ -2,9 +2,9 @@
 // for each learner in your group. This section should contain a paragraph 
 // with the name of the learner. Those sections should be appended in the <article>
 
-let learners = ['Ada','Basile', 'Beatrice', 'Céline', 'Claire', 'David', 'Freke', 'James', 'Jean', 'Jitske', 'Juraj', 'Lisa', 'Marieke', 'Nick', 'Niels', 'Pious', 'Rachid', 'Raoul', 'Sander', 'Sarah', 'Seppe', 'Sofie', 'Sven', 'Tesse', 'Thomas', 'Toon', 'Vincent', 'Ward', 'Xander', 'Yousra'];
-let articleEl = document.querySelector("article");
-let luma;
+const learners = ['Ada','Basile', 'Beatrice', 'Céline', 'Claire', 'David', 'Freke', 'James', 'Jean', 'Jitske', 'Juraj', 'Lisa', 'Marieke', 'Nick', 'Niels', 'Pious', 'Rachid', 'Raoul', 'Sander', 'Sarah', 'Seppe', 'Sofie', 'Sven', 'Tesse', 'Thomas', 'Toon', 'Vincent', 'Ward', 'Xander', 'Yousra'];
+const articleEl = document.querySelector("article");
+let luminance;
 
 let randomLearners = shuffleArray(learners);
 
@@ -19,7 +19,7 @@ for (let learner of randomLearners) {
     articleEl.append(section);
 
 // If the background is dark the text should be white, if the background is light the text should be black
-    if (luma < 128) { //tinycolor lib determines dark colors anything under a luma of 128
+    if (luminance < 128) { //tinycolor lib determines dark colors anything under a luma of 128
         p.style.color = "#fff";
     }
 }
@@ -29,10 +29,12 @@ function randomColor() {
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
 
-    luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; //standards
+    luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b; //standards
     // https://stackoverflow.com/questions/12043187/how-to-check-if-hex-color-is-too-black
     result = "rgb(" + r + ", " + g + ", " + b + ")";
     return result;
+    //solution to not use global var ==> returning r g b in an array so you can use it
+    //afterwards to calculate luminance, section.style.backgroundColor would = string with vars inside
 }
 
 // Find a way so that everytime you load the page the order of the elements changes!

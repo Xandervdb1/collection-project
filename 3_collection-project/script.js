@@ -1,3 +1,4 @@
+import {collection} from "./collection.js";
 for (let movie of collection) {
     let cardscontainer = document.querySelector(".cards");
     
@@ -178,6 +179,7 @@ for (let movie of collection) {
     cardscontainer.append(moviecard);
 
     moviecard.addEventListener("mouseenter", (e) => {
+        console.log("mouseenter");
         imdbicon.setAttribute("src", "./assets/imdbiconwhite.png");
         youtubeicon.setAttribute("src", "./assets/youtubeiconwhite.png");
         moviecard.style.backgroundColor = "#383D5E";
@@ -200,9 +202,15 @@ for (let movie of collection) {
     });
 }
 
+let filterTags = document.querySelectorAll(".tags input");
 let searchInput = document.querySelector(".search");
 searchInput.addEventListener("keyup", (e) => {
-    filter = searchInput.value.toUpperCase();
+    for (let filterTag in filterTags) {
+        if (filterTag.checked) {
+            filterTag.checked = false;
+        }
+    }
+    let filter = searchInput.value.toUpperCase();
     let cardsHidden = 0;
     let cards = document.querySelectorAll(".card");
     for (let card of cards) {
@@ -223,17 +231,60 @@ searchInput.addEventListener("keyup", (e) => {
     }
 });
 
-let filterTags = document.querySelectorAll(".tags input");
+
 let filterLabels = document.querySelectorAll(".tags label");
+let cards = document.querySelectorAll(".card");
+let filters = [];
 console.log(filterLabels)
 for (let filterTag of filterTags) {
     filterTag.checked = false;
     filterTag.addEventListener("change", (e) => {
         let label = e.target.nextElementSibling;
         if (filterTag.checked) {
+            filters.push(label.innerHTML.toUpperCase());
+            for (let card of cards) {
+                card.style.display = "none"
+                let genreTags = card.querySelectorAll(".card .genre");
+                let genres = [];
+                for (let genreTag of genreTags) {
+                    let genreText = genreTag.innerHTML.toUpperCase();
+                    genres.push(genreText);
+                }
+                let common = findCommonElements(genres, filters);
+                if (common) {
+                    card.style.display = "";
+                }
+                // console.log(card)
+                // console.log(common);
+            }
+            console.log(filters);
             label.style.backgroundColor = "#383D5E";
             label.style.color = "#D9DBF1";
         } else {
+            let index = filters.indexOf(label.innerHTML.toUpperCase());
+            filters.splice(index, 1);
+            console.log(filters);
+            for (let card of cards) {
+                card.style.display = "none"
+                let genreTags = card.querySelectorAll(".card .genre");
+                let genres = [];
+                for (let genreTag of genreTags) {
+                    let genreText = genreTag.innerHTML.toUpperCase();
+                    genres.push(genreText);
+                }
+                let common = findCommonElements(genres, filters);
+                if (common) {
+                    card.style.display = "";
+                }
+                // console.log(card)
+                // console.log(common);
+            }
+            if (filters.length === 0) {
+                console.log("filter empty")
+                for (let card of cards) {
+                    card.style.display = "block";
+                }
+            }
             label.style.backgroundColor = "#D9DBF1";
             label.style.color = "#230903";
         }
@@ -276,7 +327,7 @@ function checkGenre(genre) {
 }
 
 function checkluma(color) {
-    colorArr =  color.substring(4, color.length-1).replace(/ /g, '').split(',');
+    let colorArr =  color.substring(4, color.length-1).replace(/ /g, '').split(',');
     let r  = parseInt(colorArr[0]);
     let g  = parseInt(colorArr[1]);
     let b  = parseInt(colorArr[2]);
@@ -286,4 +337,8 @@ function checkluma(color) {
     if (luma > 128) {
         return "#230903";
     }
+}
+
+function findCommonElements(arr1, arr2) {
+    return arr1.some(item => arr2.includes(item))
 }

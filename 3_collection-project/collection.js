@@ -1,4 +1,4 @@
-const collection = [
+export const collection = [
     {
         title: "Lion King",
         director: "Rob Minkoff",
